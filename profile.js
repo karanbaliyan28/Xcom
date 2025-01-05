@@ -113,7 +113,6 @@ function renderProducts(products) {
       "border",
       "border-[#327825]",
       "w-[80%]",
-      "max-h-[450px]",
       "block",
       "mx-auto",
       "mt-3"

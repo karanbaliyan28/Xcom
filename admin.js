@@ -141,7 +141,6 @@ function renderProducts() {
       "w-[90%]",
       "border",
       "border-[#327825]",
-      "max-h-[450px]",
       "mt-4",
       "block",
       "mx-auto",
