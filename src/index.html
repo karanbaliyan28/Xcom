@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Signup</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        max-width: 500px;
+        margin: 0 auto;
+        background: linear-gradient(
+                rgba(0, 0, 0, 0.6), /* Blackish overlay with opacity */
+                rgba(0, 0, 0, 0.6)
+            ),
+            url("https://images.pexels.com/photos/5632371/pexels-photo-5632371.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+        background-size: cover;
+        background-position: center;
+        color: white;
+    }
+
+        h1 {
+            margin: auto;
+            font-family: monospace;
+            font-size: 35px;
+            color: #dee2ddf8;
+        }
+
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 8px 16px;
+            cursor: pointer;
+            background-color: #327825;
+            color: white;
+            border: none;
+            border-radius: 4px;
+        }
+
+        button:hover {
+            background-color: #1c3c16;
+        }
+
+        form {
+            display: none;
+            flex-direction: column;
+            gap: 10px;
+            background: #000000a1;
+            padding: 20px;
+            border: 1px solid #62ff47;
+            border-radius: 8px;
+        }
+
+        form.active {
+            display: flex;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input {
+            padding: 8px;
+            color: white;
+            background: #000;
+            border: 1.5px solid #5eff42;
+            border-radius: 4px;
+        }
+
+        input:focus {
+            border: 1px solid #5eff42;
+            outline: #5eff42;
+        }
+
+        .alert {
+            color: red;
+            font-size: 14px;
+            min-height: 20px;
+        }
+
+        .success {
+            color: rgb(255, 221, 69);
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="success" id="successMessage"></div>
+    <div class="btn-container">
+        <button id="loginBtn">Login</button>
+        <button id="signupBtn">Sign Up</button>
+    </div>
+
+    <form id="signup">
+        <h1>Welcome</h1>
+        <label for="username">Username</label>
+        <input type="text" placeholder="Enter your username" id="username" required>
+        <div class="alert" id="usernameAlert"></div>
+
+        <label for="adminCode">Admin Registration Code (Optional)</label>
+        <input type="text" id="adminCode" placeholder="Enter admin code if registering as admin">
+        <div class="alert" id="adminCodeAlert"></div>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+        <div class="alert" id="emailAlert"></div>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter password" required>
+        <div class="alert" id="passwordAlert"></div>
+
+        <label for="cnfpassword">Confirm Password</label>
+        <input type="password" id="cnfpassword" placeholder="Confirm password" required>
+        <div class="alert" id="cnfPasswordAlert"></div>
+
+        <button type="submit">Sign Up</button>
+    </form>
+
+    <form id="login">
+        <h1>Welcome Back</h1>
+        <label for="loginEmail">Email</label>
+        <input type="email" id="loginEmail" placeholder="Enter your email" required>
+        <div class="alert" id="loginEmailAlert"></div>
+
+        <label for="loginPassword">Password</label>
+        <input type="password" id="loginPassword" placeholder="Enter your password" required>
+        <div class="alert" id="loginPasswordAlert"></div>
+
+        <button type="submit">Login</button>
+    </form>
+
+   <script src="index.js"></script>
+</body>
+
+</html>

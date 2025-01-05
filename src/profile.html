@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Management</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="scroll.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0 auto;
+            background: linear-gradient(rgba(68, 67, 67, 0.816),
+                    /* Blackish overlay with opacity */
+                    rgba(0, 0, 0, 0.81)),
+                url("https://images.pexels.com/photos/1666067/pexels-photo-1666067.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            color: white;
+        }
+    </style>
+</head>
+
+<body class="font-mono bg-gray-200 p-2 overflow-x-hidden w-100vw">
+    <!-- Navigation -->
+    <nav
+        class="h-18 w-[95vw] mx-auto border border-[#327825] rounded-lg text-white flex items-center shadow-lg justify-between px-4 p-2">
+        <h1 class="font-mono text-md md:text-xl font-semibold">Xcom</h1>
+        <h1 id="username" class="md:text-xl text-blue-500  md:font-semibold md:block hidden"></h1>
+        <div class="flex items-center gap-3">
+            <button id="logoutBtn" class="hover:bg-[#1a3e14] bg-[#327825] px-2 py-2 rounded-lg">Logout</button>
+            <i id="cartBtn"
+                class="fa-duotone fa-solid fa-cart-shopping cursor-pointer text-blue-500 text-2xl ml-3  hover:text-blue-800  transition-transform duration-300"></i>
+        </div>
+    </nav>
+
+    <section class="pl-4 mt-4">
+        <h1 id="addMessage" class="text-xl text-center text-orange-500 h-8"></h1>
+        <h1 class="text-xl text-center text-orange-500 hover:underline">All Products</h1>
+        <div id="productContainer"
+            class="px-2 w-full  grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4  md:mt-4 justify-center overflow-x-hidden">
+
+        </div>
+
+    </section>
+
+    <section
+        class="p-4 rounded-lg bg-[#1a1919d1]  mt-4 hidden  absolute top-20 border-green-500 border md:right-10 right-2   md:m-0 transition-transform duration-300"
+        id="cartBox">
+        <h1 class="text-xl text-center hover:underline">Your Cart</h1>
+        <div id="cartContainer" class="flex flex-col text-black gap-[40px] ml-2 mt-4">
+
+        </div>
+        <div class="mt-2 flex justify-end items-center gap-4">
+            <h3 id="total" class="text-white">Total:300</h3>
+            <button id="checkoutBtn"
+                class="bg-[#327825] text-white hover:bg-[#1a3e14] text px-2 py-1 rounded-md">Checkout</button>
+        </div>
+    </section>
+
+
+
+    <script src="profile.js"></script>
+
+</body>
+
+</html>
